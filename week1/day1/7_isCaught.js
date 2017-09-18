@@ -25,6 +25,7 @@ function isCaught(s) {
   }
 }
 
+// better: search position of "m", store and compare to pos. of "C"
 
 console.log(isCaught('C.....m')); // => false
 console.log(isCaught('C..m')); // => true
