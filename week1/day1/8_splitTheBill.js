@@ -12,14 +12,12 @@
 function splitTheBill(group) {
   // add up expenses
   var totalExpenses = 0;
-  var members = 0;
   for (var member in group) {
     totalExpenses = totalExpenses + group[member];
-    members++;
   }
 
   // amount to be paid by each
-  var toBePaid = totalExpenses / members;
+  var toBePaid = totalExpenses / Object.keys(group).length;
 
   // split expenses
   for (member in group) {
