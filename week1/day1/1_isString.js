@@ -2,7 +2,6 @@
 
 function isString(variable) {
   if(typeof variable == 'string') {
-    // return true;
     console.log(true);
   } else {
     console.log(false);
