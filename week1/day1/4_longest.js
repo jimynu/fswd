@@ -15,10 +15,9 @@ function longest(s1, s2) {
       stringMaterial.push(myString[i]);
     }
   }
-  // sort content of stringMaterial alphabetically +
-  var sortedString = stringMaterial.sort();
-  // join letters without anything in between
-  console.log(sortedString.join(""));
+
+  // sort content of stringMaterial alphabetically + join digits
+  console.log(stringMaterial.sort().join(""));
 }
 
 
