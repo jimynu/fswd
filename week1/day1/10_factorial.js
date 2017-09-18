@@ -7,7 +7,7 @@
 function factorial(n) {
   var result = 1;
   if(n>0) {
-    console.log("n ist " + n);
+    //console.log("n ist " + n);
     result = n * factorial(--n);
   }
   return result;
