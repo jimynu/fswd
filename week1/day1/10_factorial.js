@@ -5,12 +5,10 @@
 // Write a recursive approach for this problem.
 
 function factorial(n) {
-  var result = 1;
-  if(n>0) {
-    //console.log("n ist " + n);
-    result = n * factorial(--n);
+  if (n==0) {
+    return 1;
   }
-  return result;
+  return n * factorial(--n);
 }
 
 console.log(factorial(5)); // => 120

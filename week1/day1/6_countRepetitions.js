@@ -32,4 +32,18 @@ function countRepetitions(authorsArr) {
   console.log(authors);
 }
 
+// solution provided
+
+function countRepetitions2(elements) {
+  return elements.reduce(function(acc, el) { //acc[umulator] = empty object, el = element
+    if (acc[el]) { // is already in object (acc)
+      acc[el] += 1;
+    } else { // not in object
+      acc[el] = 1;
+    }
+
+    return acc;
+  }, {});
+}
+
 countRepetitions(['kerouac', 'fante', 'fante', 'buk', 'hemingway', 'hornby', 'kerouac', 'buk', 'fante']);

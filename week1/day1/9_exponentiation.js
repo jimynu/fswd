@@ -38,12 +38,21 @@
 //   return(result);
 // }
 
-function exp(b, n) {
-  var result = 1;
-  if(n>0) {
-    result = b * exp(b, n-1);
+// // mine
+// function exp(b, n) {
+//   var result = 1;
+//   if(n>0) {
+//     result = b * exp(b, n-1);
+//   }
+//   return result;
+// }
+
+function exp(num, base) {
+  if (base === 0) {
+    return 1;
   }
-  return result;
+
+  return num * exp(num, base - 1);
 }
 
 

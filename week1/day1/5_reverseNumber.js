@@ -13,8 +13,19 @@ function convert(number) {
   }
 
   //sort nurmberArray
-  console.log(numberArray.sort().reverse());
+  return numberArray.sort().reverse();
 }
 
-convert(429563); // => [9, 6, 5, 4, 3, 2]
-convert(324); // => [4, 3, 2]
+
+// functional solution
+function convert2(num) {
+  return num
+    .toString()
+    .split('')
+    .map(Math.floor) // strings > numbers
+    .sort()
+    .reverse();
+}
+
+console.log(convert(429563)); // => [9, 6, 5, 4, 3, 2]
+console.log(convert(324)); // => [4, 3, 2]
