@@ -21,8 +21,8 @@ Trivial.prototype.askQuestion = function() {
   if ( question.choices === 'binary' ) {
     givenAnswer = window.confirm(player.display() + question.title);
   } else {
-    givenAnswer = window.prompt(player.display() + question.display());
-    givenAnswer = givenAnswer.toUpperCase();
+    givenAnswer = (window.prompt(player.display() + question.display()))
+        .toUpperCase();
   }
 
 
@@ -114,9 +114,25 @@ Trivial.prototype.showCategoryScore = function() {
   var returnString = '';
   for (var playerNumber in this.players) {
     var player = this.players[playerNumber];
-    returnString = returnString + player.name + ': ' + JSON.stringify(player.scoresPerCat) + '\n';
+    returnString = returnString + player.name + ': ' + JSON.stringify(player.scoresPerCat, null, 2) + '\n';
   }
   return returnString;
+};
+
+Trivial.prototype.setPlayers = function() {
+  var name = window.prompt("Your name? (blank to start game)");
+  if (name === '') {
+    //start game, if there's players
+    if (this.players.length > 0) {
+      trivial.play();
+    } else {
+      this.setPlayers();
+    }
+  } else {
+    var playerx = new Player(name);
+    this.addPlayer(playerx);
+    this.setPlayers();
+  }
 };
 
 
@@ -170,8 +186,6 @@ Player.prototype.ratio = function() {
 
 
 
-
-
 // start game: create instance
 var trivial = new Trivial();
 
@@ -187,11 +201,12 @@ trivial.addQuestion(question4);
 console.log(trivial.questions);
 
 // set players
-var player1 = new Player('Amy');
-trivial.addPlayer(player1);
-var player2 = new Player('Bob');
-trivial.addPlayer(player2);
+// var player1 = new Player('Amy');
+// trivial.addPlayer(player1);
+// var player2 = new Player('Bob');
+// trivial.addPlayer(player2);
+trivial.setPlayers();
 
 // start the game
 //trivial.askQuestion(question);
-trivial.play();
+//trivial.play();
