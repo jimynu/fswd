@@ -19,8 +19,10 @@ Trivial.prototype.askQuestion = function() {
   var player = this.players[this.currentPlayerIndex];
   var givenAnswer;
   if ( question.choices === 'binary' ) {
+    // yes/no question
     givenAnswer = window.confirm(player.display() + question.title);
   } else {
+    // multiple choice
     givenAnswer = (window.prompt(player.display() + question.display()))
         .toUpperCase();
   }
