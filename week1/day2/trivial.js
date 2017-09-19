@@ -119,6 +119,22 @@ Trivial.prototype.showCategoryScore = function() {
   return returnString;
 };
 
+Trivial.prototype.setPlayers = function() {
+  var name = window.prompt("Your name? (blank to start game)");
+  if (name === '') {
+    //start game, if there's players
+    if (this.players.length > 0) {
+      trivial.play();
+    } else {
+      this.setPlayers();
+    }
+  } else {
+    var playerx = new Player(name);
+    this.addPlayer(playerx);
+    this.setPlayers();
+  }
+};
+
 
 
 // constructor for class Question
@@ -170,8 +186,6 @@ Player.prototype.ratio = function() {
 
 
 
-
-
 // start game: create instance
 var trivial = new Trivial();
 
@@ -187,11 +201,12 @@ trivial.addQuestion(question4);
 console.log(trivial.questions);
 
 // set players
-var player1 = new Player('Amy');
-trivial.addPlayer(player1);
-var player2 = new Player('Bob');
-trivial.addPlayer(player2);
+// var player1 = new Player('Amy');
+// trivial.addPlayer(player1);
+// var player2 = new Player('Bob');
+// trivial.addPlayer(player2);
+trivial.setPlayers();
 
 // start the game
 //trivial.askQuestion(question);
-trivial.play();
+//trivial.play();
