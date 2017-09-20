@@ -90,6 +90,6 @@ ball = new Ball();
 game.play(ball);
 
 // debug: stop ball after some seconds
-setTimeout(function() {
-  ball.speed = [0, 0];
-}, 2000);
+// setTimeout(function() {
+//   ball.speed = [0, 0];
+// }, 2000);
