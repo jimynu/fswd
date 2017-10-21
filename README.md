@@ -1,5 +1,5 @@
 # fswd
-Selection of code snippets and weekly assesments produced during [Propulsion Academy](https://propulsionacademy.com) fullstack bootcamp.
+Selection of code snippets and weekly assignments produced during [Propulsion Academy](https://propulsionacademy.com) fullstack bootcamp.
 
 **Topics**:
 
