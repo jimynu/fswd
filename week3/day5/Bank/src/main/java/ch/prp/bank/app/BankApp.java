@@ -11,7 +11,7 @@ public class BankApp {
 
 	public static void main(String[] args) {		
 		
-		System.out.println("Ohai! Thanks for visiting THE BANK!");
+		System.out.println("Hi! Thanks for visiting THE BANK!");
 		try (Scanner sc = new Scanner(System.in)) {
 			printInitialBlock(); // print initial explanations once
 			

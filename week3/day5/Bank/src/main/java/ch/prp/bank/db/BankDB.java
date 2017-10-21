@@ -15,6 +15,7 @@ public class BankDB {
 	public static void addAccount(String name) {
 		Integer uid = Utils.generateUID();
 		BankDB.db.put(uid, new Account(name, uid, 0));
+//		debug
 //		System.out.println(uid /* + ": " + db.get(uid) */);
 	}
 
@@ -46,7 +47,7 @@ public class BankDB {
 		return new ArrayList<Account>(db.values());
 	}
 
-	// false: kein solcher account
+	// false: no such account
 	public static boolean credit(int uid, double amount) {
 		if (db.containsKey(uid)) {
 			double newBalance = db.get(uid).getBalance() + amount;
@@ -59,7 +60,7 @@ public class BankDB {
 	}
 
 	// two points of failure: no such account; not enough money
-	// für einfach in beiden fällen false
+	// returns "false" in both cases, for the sake of simplicity
 	public static boolean debit(int uid, double amount) {
 		if (db.containsKey(uid)) {
 			// check if enough money
