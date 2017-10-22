@@ -1,0 +1,19 @@
+String mainClassName = "ch.prp.twt.app.TweetApp";
+
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	testImplementation 'junit:junit:4.12'
+	compileOnly "org.projectlombok:lombok:1.16.18"
+	compile 'org.hsqldb:hsqldb:2.0.0'
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': "${mainClassName}"
+	}
+}
