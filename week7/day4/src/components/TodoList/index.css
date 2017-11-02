@@ -1,0 +1,18 @@
+.TodoItem-completed {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 2px 0;
+  padding: 8px 0;
+  color: #333;
+  font-size: 20px;
+  background-color: #fbfbfb;
+}

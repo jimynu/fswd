@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+}
+
+p, li, button, input, label {
+  font-family: 'Trebuchet MS';
+  font-weight: 400;
+}

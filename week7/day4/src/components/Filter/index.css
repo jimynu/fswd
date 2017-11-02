@@ -1,0 +1,16 @@
+.filters {
+  height: 30px;
+  padding-top: 14px;
+}
+
+.filters label {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  color: #69A6CE;
+  margin-right: 12px;
+}
+
+.filters input {
+  margin-left: 12px;
+}
