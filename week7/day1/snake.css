@@ -1,0 +1,20 @@
+#container {
+  width: 520px;
+  margin: auto;
+}
+
+.cell {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+  background-color: #D3DFE7;
+}
+
+.cell.active {
+  background-color: #333;
+}
+
+.cell.head {
+  background-color: #69A6CE;
+}
